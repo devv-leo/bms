@@ -41,9 +41,9 @@ if (isset($_POST['transfer'])){
     mysqli_query($con,"INSERT INTO account_history(account,sender,s_name,reciever,r_name,dt,tm,type,amount) VALUES('$acc1','$acc','$name','$acc1','$name1','$regisdate','$tms','Recieved','$newbnc')");
     $connected = @fsockopen("www.google.com", 80); 
     if ($connected){
-      $msg="Hello dear ".$name."! You have made transection on .".$tms1." from SKY BANK ACCOUNT that is done successfully. Amount ".$newbnc.".00PKR is send to ".$acc1." successfully. Your remaining account balance is ".$bnc1.".00PKR. Thank you for joining SKY BANK service.";
+      $msg="Hello dear ".$name."! You have made transection on .".$tms1." from SKY BANK ACCOUNT that is done successfully. Amount ".$newbnc.".00NGN is send to ".$acc1." successfully. Your remaining account balance is ".$bnc1.".00NGN. Thank you for joining SKY BANK service.";
      email_send($email,"Transection done successfully",$msg);
-     $msg1="Hello dear ".$name1."! You have recieved amount ".$newbnc.".00PKR on ".$tms1." in your SKY BANK ACCOUNT from account nunmber ".$acc.". Your current account balance is ".$bnc2.".00PKR. Thank you for joining SKY BANK service.";
+     $msg1="Hello dear ".$name1."! You have recieved amount ".$newbnc.".00NGN on ".$tms1." in your SKY BANK ACCOUNT from account nunmber ".$acc.". Your current account balance is ".$bnc2.".00NGN. Thank you for joining SKY BANK service.";
      email_send($email1,"Recieved Amount",$msg1);
     }
     $_SESSION["title"]="Done";

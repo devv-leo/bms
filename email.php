@@ -12,7 +12,7 @@ function email_send($address,$header,$msg)
            $mail->Port = 587;
            $mail->SMTPSecure = "tls";
            $mail->SMTPAuth = true;
-           $mail->Username = "lekan.code@gmail.com";// enter your gmail account 
+           $mail->Username = "lekan.code@gmail.com"; // receipient email address
            $mail->Password = "hwmtgjrljztzeclv"; //enter your email password
            $mail->AddAddress($address);
            $mail->SetFrom("lekan.code@gmail.com", "Sky Bank Limited");

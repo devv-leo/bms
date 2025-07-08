@@ -27,7 +27,7 @@ if (isset($_POST['transfer'])){
     mysqli_query($con,"INSERT INTO account_history(account,sender,s_name,reciever,r_name,dt,tm,type,amount) VALUES('$acc','$acc','$name','null','null','$regisdate','$tms','Deposit','$newbnc')");
     $connected = @fsockopen("www.google.com", 80); 
     if ($connected){
-      $msg="Hello dear ".$name."! You have deposit balance in your SKY BANK account  on ".$tms1.". Amount ".$newbnc.".00PKR deposit successfully. Your current account balance is ".$bnc1.".00PKR. Thank you for joining SKY BANK service.";
+      $msg="Hello dear ".$name."! You have deposit balance in your SKY BANK account  on ".$tms1.". Amount ".$newbnc.".00NGN deposit successfully. Your current account balance is ".$bnc1.".00NGN. Thank you for joining SKY BANK service.";
      email_send($email,"Amount deposit successfully",$msg);
     }
     $_SESSION["title"]="Done";
@@ -340,7 +340,7 @@ html {
                         </div>
                         <div  class="col-sm-6">
                             <p for="exampleInputEmail1" style="margin-bottom: 1px; margin-top: 8px;">Current Balance</p>
-                            <input type="text" class="form-control" name="blnc" value="<?php echo $row['balance'].".00 PKR";?>"  readonly>
+                            <input type="text" class="form-control" name="blnc" value="<?php echo $row['balance'].".00 NGN";?>"  readonly>
                         </div>
                     </div>
                     <hr style="height:1px;border-width:0; width: 100%; margin-bottom:  -5px; margin-top: 20px; color:red;background-color:gray;">

@@ -27,7 +27,7 @@ if (isset($_POST['transfer'])){
     mysqli_query($con,"INSERT INTO account_history(account,sender,s_name,reciever,r_name,dt,tm,type,amount) VALUES('$acc','$acc','$name','null','null','$regisdate','$tms','Withdraw','$newbnc')");
     $connected = @fsockopen("www.google.com", 80); 
     if ($connected){
-      $msg="Hello dear ".$name."! You have withdraw balance from your SKY BANK account  on ".$tms1.". Amount ".$newbnc.".00PKR withdraw successfully. Your remaining account balance is ".$bnc1.".00PKR. Thank you for joining SKY BANK service.";
+      $msg="Hello dear ".$name."! You have withdraw balance from your SKY BANK account  on ".$tms1.". Amount ".$newbnc.".00NGN withdraw successfully. Your remaining account balance is ".$bnc1.".00NGN. Thank you for joining SKY BANK service.";
      email_send($email,"Amount withdraw successfully",$msg);
     }
     $_SESSION["title"]="Done";

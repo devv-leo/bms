@@ -308,11 +308,11 @@ input[type="date"]:valid::before {
               <?php 
               $sl = mysqli_query($con,"SELECT SUM(balance) as total FROM accounts_info");
               $r = mysqli_fetch_array($sl);
-              $number = $r['total'].".00 PKR";
+              $number = $r['total'].".00 NGN";
               if (isset($number)) {
                 # code...
               }else {
-                $number="0.00 PKR";
+                $number="0.00 NGN";
               }
                ?>
               <input type="text" name="pt" value="<?php echo $number ?>" readonly class="form-control">

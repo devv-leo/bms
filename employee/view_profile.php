@@ -15,30 +15,30 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 $with = mysqli_fetch_array(mysqli_query($con,"SELECT SUM(amount) as total1 FROM account_history where account='$id' and type='Withdraw'"));
 $with1=$with['total1'];
 if (isset($with1)) {
-    $with1=$with['total1'].".00PKR";
+    $with1=$with['total1'].".00NGN";
 }else{
-    $with1="0.00PKR";
+    $with1="0.00NGN";
 }
 $sent = mysqli_fetch_array(mysqli_query($con,"SELECT SUM(amount) as total1 FROM account_history where account='$id' and type='Transection'"));
 $sent1=$sent['total1'];
 if (isset($sent1)) {
-    $sent1=$sent['total1'].".00PKR";
+    $sent1=$sent['total1'].".00NGN";
 }else{
-    $sent1="0.00PKR";
+    $sent1="0.00NGN";
 }
 $gt = mysqli_fetch_array(mysqli_query($con,"SELECT SUM(amount) as total1 FROM account_history where account='$id' and type='Recieved'"));
 $gt1=$gt['total1'];
 if (isset($gt1)) {
-    $gt1=$gt['total1'].".00PKR";
+    $gt1=$gt['total1'].".00NGN";
 }else{
-    $gt1="0.00PKR";
+    $gt1="0.00NGN";
 }
 $dp = mysqli_fetch_array(mysqli_query($con,"SELECT SUM(amount) as total1 FROM account_history where account='$id' and type='Deposit'"));
 $dp1=$dp['total1'];
 if (isset($dp1)) {
-    $dp1=$dp['total1'].".00PKR";
+    $dp1=$dp['total1'].".00NGN";
 }else{
-    $dp1="0.00PKR";
+    $dp1="0.00NGN";
 }
 ?>
 <!DOCTYPE html>
@@ -388,7 +388,7 @@ html {
                         <div class="row">
                             <div class="col-lg-2">
                                 <p for="exampleInputPassword1" style="margin-bottom: 1px; margin-top: 8px;">Current Balance</p>
-                                <input type="text" class="form-control"  name="bnc"value="<?php echo $row['balance'].".00PKR";?>" readonly>
+                                <input type="text" class="form-control"  name="bnc"value="<?php echo $row['balance'].".00NGN";?>" readonly>
                             </div>
                             <div class="col-lg-2">
                                 <p for="exampleInputPassword1" style="margin-bottom: 1px; margin-top: 8px;">Deposit Balance</p>
