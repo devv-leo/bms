@@ -333,15 +333,6 @@ html {
                             <li>
                                 <a href="search.php">Accounts List</a>
                             </li>
-                            <li>
-                                <a href="search.php">Delete Account</a>
-                            </li>
-                            <li>
-                                <a href="search.php">Search Account</a>
-                            </li>
-                            <li>
-                                <a href="search.php">Update Account</a>
-                            </li> 
                         </ul>
                     </li>
                    <li>

@@ -261,15 +261,6 @@ error_log("Debug: Starting HTML");
                             <li>
                                 <a href="employee/search.php">Accounts List</a>
                             </li>
-                            <li>
-                                <a href="employee/search.php">Delete Account</a>
-                            </li>
-                            <li>
-                                <a href="employee/search.php">Search Account</a>
-                            </li>
-                            <li>
-                                <a href="employee/search.php">Update Account</a>
-                            </li> 
                         </ul>
                     </li>
                    <li>
@@ -315,6 +306,12 @@ error_log("Debug: Starting HTML");
                         <a href="employee/bank_balance.php">
                             <i class="material-icons">account_balance</i>
                             <span>Bank Balance</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="employee/ai_assistant.php">
+                            <i class="material-icons">smart_toy</i>
+                            <span>AI Assistant</span>
                         </a>
                     </li>
                    <li>
