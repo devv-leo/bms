@@ -243,7 +243,7 @@ input[type="date"]:valid::before {
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                    <a href="transfer.php">Transection</a>
+                                    <a href="transfer.php">transaction</a>
                                 </li>
                                 <li>
                                     <a href="deposit.php">Deposit Balance</a>
@@ -262,7 +262,7 @@ input[type="date"]:valid::before {
                         <ul class="ml-menu">
                                 
                                 <li>
-                                    <a href="history.php?id=">Transection History</a>
+                                    <a href="history.php?id=">transaction History</a>
                                 </li>
                                 <li>
                                     <a href="check_balance.php">Check Current Balance</a>
@@ -329,7 +329,7 @@ input[type="date"]:valid::before {
                 <div  class="col-sm-2">
                 <select class="form-control" onchange="myfun()" id="tp">
                     <option selected disabled hidden value="">Select history type</option>
-                    <option value="Transection">Transection</option>
+                    <option value="transaction">transaction</option>
                     <option value="Recieved">Recieved</option>
                     <option value="DEPOSIT">Deposit</option>
                     <option value="Withdraw">Withdraw</option>
@@ -383,7 +383,7 @@ input[type="date"]:valid::before {
                           <td style="text-align: center;padding-top: 25px;"><?php echo $row['name'];?></td>
                           <td style="text-align: center;padding-top: 25px;"><?php echo $row['account'];?></td>
                           <?php
-                          if ($row['type']=="Transection") {
+                          if ($row['type']=="transaction") {
                           ?>
                           <td style="text-align: center;padding-top: 25px;"><?php echo $row['reciever'];?></td>
                           <td style="text-align: center;padding-top: 25px;"><?php echo $row['r_name'];?></td>
@@ -430,7 +430,7 @@ input[type="date"]:valid::before {
     if (td) {
       txtValue = td.textContent || td.innerText;
       var txtValue1 = td1.textContent || td1.innerText;
-      if(filter=="TRANSECTION" || filter=="RECIEVED" || filter=="DEPOSIT" || filter=="WITHDRAW"){
+      if(filter=="transaction" || filter=="RECIEVED" || filter=="DEPOSIT" || filter=="WITHDRAW"){
       if (txtValue.toUpperCase().indexOf(filter) > -1 || txtValue1.toUpperCase().indexOf(filter) > -1) {
         tr[i].style.display = "";
       } else {
@@ -438,7 +438,7 @@ input[type="date"]:valid::before {
       }
     }
     else if(filter=="ALL"){
-    if (txtValue.toUpperCase().indexOf("TRANSECTION") > -1 || txtValue.toUpperCase().indexOf("RECIEVED") > -1 || txtValue1.toUpperCase().indexOf("DEPOSIT") > -1 || txtValue1.toUpperCase().indexOf("WITHDRAW") > -1) {
+    if (txtValue.toUpperCase().indexOf("transaction") > -1 || txtValue.toUpperCase().indexOf("RECIEVED") > -1 || txtValue1.toUpperCase().indexOf("DEPOSIT") > -1 || txtValue1.toUpperCase().indexOf("WITHDRAW") > -1) {
         tr[i].style.display = "";
       } else {
         tr[i].style.display = "none";

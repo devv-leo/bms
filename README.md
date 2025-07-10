@@ -11,8 +11,8 @@ This project is develop using php, html, javaScript, Bootstrap and CSS.
 1. Manage balnce record
 2. User will deposit Money.
 3. Withdraw
-4. Transection
-5. Transections History
+4. transaction
+5. transactions History
 6. After any action like withdraw etc then a proper email will send on account holder email.
 ## Users ##
 1. Super Admin

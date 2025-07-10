@@ -279,7 +279,7 @@ error_log("Debug: Starting HTML");
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                    <a href="employee/transfer.php">Transection</a>
+                                    <a href="employee/transfer.php">transaction</a>
                                 </li>
                                 <li>
                                     <a href="employee/deposit.php">Deposit Balance</a>
@@ -298,7 +298,7 @@ error_log("Debug: Starting HTML");
                         <ul class="ml-menu">
                                 
                                 <li>
-                                    <a href="employee/history.php?id=">Transection History</a>
+                                    <a href="employee/history.php?id=">transaction History</a>
                                 </li>
                                 <li>
                                     <a href="employee/check_balance.php">Check Current Balance</a>
@@ -415,13 +415,13 @@ error_log("Debug: Starting HTML");
                 <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12">
                     <div class="info-box bg-green hover-expand-effect">
                         <div class="icon">
-                            <a href="employee/history_details.php?ty=Transection">
+                            <a href="employee/history_details.php?ty=transaction">
                             <i class="material-icons">swap_horiz</i>
                         </a>
                         </div>
                         <div class="content" id="bnk">
-                            <div class="text">TRANSECTION MONEY</div>
-                            <div ><h4 style="margin-top: 5px; font-size: 20px;"><?php echo rup_format("SELECT SUM(amount) as total FROM account_history where type='Transection'") ?></h4></div>
+                            <div class="text">transaction MONEY</div>
+                            <div ><h4 style="margin-top: 5px; font-size: 20px;"><?php echo rup_format("SELECT SUM(amount) as total FROM account_history where type='transaction'") ?></h4></div>
                         </div>
                     </div>
                 </div>
@@ -559,13 +559,13 @@ error_log("Debug: Starting HTML");
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <div class="info-box bg-green hover-expand-effect">
                         <div class="icon">
-                            <a href="employee/history_details.php?ty=Transection">
+                            <a href="employee/history_details.php?ty=transaction">
                             <i class="material-icons">swap_horiz</i>
                         </a>
                         </div>
                         <div class="content" id="bnk">
-                            <div class="text">TRANSECTION MONEY</div>
-                            <div ><h4 style="margin-top: 5px; font-size: 20px;"><?php echo rup_format("SELECT SUM(amount) as total FROM account_history where type='Transection'") ?></h4></div>
+                            <div class="text">transaction MONEY</div>
+                            <div ><h4 style="margin-top: 5px; font-size: 20px;"><?php echo rup_format("SELECT SUM(amount) as total FROM account_history where type='transaction'") ?></h4></div>
                         </div>
                     </div>
                 </div>
@@ -715,7 +715,7 @@ error_log("Debug: Starting HTML");
                                         <i class="material-icons">more_vert</i>
                                     </a>
                                     <ul class="dropdown-menu pull-right">
-                                        <li><a href="employee/history_details.php?ty=Transection">Transection history</a></li>
+                                        <li><a href="employee/history_details.php?ty=transaction">transaction history</a></li>
                                         <li><a href="employee/history_details.php?ty=Recieved">Recieved history</a></li>
                                         <li><a href="employee/history_details.php?ty=Withdraw">Withdrawal history</a></li>
                                         <li><a href="employee/history_details.php?ty=Deposit">Deposit history</a></li>

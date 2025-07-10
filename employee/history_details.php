@@ -242,7 +242,7 @@ input[type="date"]:valid::before {
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                    <a href="transfer.php">Transection</a>
+                                    <a href="transfer.php">transaction</a>
                                 </li>
                                 <li>
                                     <a href="deposit.php">Deposit Balance</a>
@@ -261,7 +261,7 @@ input[type="date"]:valid::before {
                         <ul class="ml-menu">
                                 
                                 <li>
-                                    <a href="history.php?id=">Transection History</a>
+                                    <a href="history.php?id=">transaction History</a>
                                 </li>
                                 <li>
                                     <a href="check_balance.php">Check Current Balance</a>
@@ -349,7 +349,7 @@ input[type="date"]:valid::before {
                           <th style="text-align: center; width: 15%;">Name</th>
                           <th style="text-align: center; width: 13%;">Account Number</th>
                           <?php
-                          if ($_GET["ty"]=="Transection") {
+                          if ($_GET["ty"]=="transaction") {
                             ?>
                           <th style="text-align: center; width: 17%;">Reciever Account Number</th>
                           <th style="text-align: center; width: 17%;">Reciever Name</th>
@@ -380,7 +380,7 @@ input[type="date"]:valid::before {
                           <td style="text-align: center;padding-top: 25px;"><?php echo $row['name'];?></td>
                           <td style="text-align: center;padding-top: 25px;"><?php echo $row['account'];?></td>
                           <?php
-                          if ($row['type']=="Transection" && $_GET["ty"]=="Transection") {
+                          if ($row['type']=="transaction" && $_GET["ty"]=="transaction") {
                           ?>
                           <td style="text-align: center;padding-top: 25px;"><?php echo $row['reciever'];?></td>
                           <td style="text-align: center;padding-top: 25px;"><?php echo $row['r_name'];?></td>

@@ -37,17 +37,17 @@ if (isset($_POST['transfer'])){
     $regisdate=date("Y-m-d");
     $tms = date("h:i:s");
     $tms1 = date("Y-m-d h:i:s");
-    mysqli_query($con,"INSERT INTO account_history(account,sender,s_name,reciever,r_name,dt,tm,type,amount) VALUES('$acc','$acc','$name','$acc1','$name1','$regisdate','$tms','Transection','$newbnc')");
+    mysqli_query($con,"INSERT INTO account_history(account,sender,s_name,reciever,r_name,dt,tm,type,amount) VALUES('$acc','$acc','$name','$acc1','$name1','$regisdate','$tms','transaction','$newbnc')");
     mysqli_query($con,"INSERT INTO account_history(account,sender,s_name,reciever,r_name,dt,tm,type,amount) VALUES('$acc1','$acc','$name','$acc1','$name1','$regisdate','$tms','Recieved','$newbnc')");
     $connected = @fsockopen("www.google.com", 80); 
     if ($connected){
-      $msg="Hello dear ".$name."! You have made transection on .".$tms1." from SKY BANK ACCOUNT that is done successfully. Amount ".$newbnc.".00NGN is send to ".$acc1." successfully. Your remaining account balance is ".$bnc1.".00NGN. Thank you for joining SKY BANK service.";
-     email_send($email,"Transection done successfully",$msg);
+      $msg="Hello dear ".$name."! You have made transaction on .".$tms1." from SKY BANK ACCOUNT that is done successfully. Amount ".$newbnc.".00NGN is send to ".$acc1." successfully. Your remaining account balance is ".$bnc1.".00NGN. Thank you for joining SKY BANK service.";
+     email_send($email,"transaction done successfully",$msg);
      $msg1="Hello dear ".$name1."! You have recieved amount ".$newbnc.".00NGN on ".$tms1." in your SKY BANK ACCOUNT from account nunmber ".$acc.". Your current account balance is ".$bnc2.".00NGN. Thank you for joining SKY BANK service.";
      email_send($email1,"Recieved Amount",$msg1);
     }
     $_SESSION["title"]="Done";
-    $_SESSION["status"]="Transection done successfully";
+    $_SESSION["status"]="transaction done successfully";
     $_SESSION["code"]="success";
      header("location: transfer.php");
     exit;
@@ -262,7 +262,7 @@ html {
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                    <a href="transfer.php">Transection</a>
+                                    <a href="transfer.php">transaction</a>
                                 </li>
                                 <li>
                                     <a href="deposit.php">Deposit Balance</a>
@@ -281,7 +281,7 @@ html {
                         <ul class="ml-menu">
                                 
                                 <li>
-                                    <a href="history.php?id=">Transection History</a>
+                                    <a href="history.php?id=">transaction History</a>
                                 </li>
                                 <li>
                                     <a href="check_balance.php">Check Current Balance</a>
@@ -321,7 +321,7 @@ html {
        <div class="container-fluid">
             <div class="block-header">
                 <div  class="col-sm-8">
-                <p style="margin-left: -15px; font-size: 17px; font-weight: bold;">Transection Board</p>
+                <p style="margin-left: -15px; font-size: 17px; font-weight: bold;">transaction Board</p>
             </div>
             </div>
             <div class="row clearfix">
@@ -400,8 +400,8 @@ html {
                    <p style="text-align: left; font-weight: bold;">Action Board</p>
                    <div class="row">
                         <div  class="col-sm-5">
-                            <p for="exampleInputEmail1" style="margin-bottom: 1px; margin-top: 8px;">Transection Amount</p>
-                            <input type="number" class="form-control" name="amount" id="am"min="2000" placeholder="Enter transection amount" required>
+                            <p for="exampleInputEmail1" style="margin-bottom: 1px; margin-top: 8px;">transaction Amount</p>
+                            <input type="number" class="form-control" name="amount" id="am"min="2000" placeholder="Enter transaction amount" required>
                         </div>
                         <div  class="col-sm-2">
                         <input type="submit"  class="btn btn-primary form-control" style="margin-top: 28px; font-size: 17px; width: 120px; border-radius: 5px;" name="transfer" id="trans" value="Transfer" onclick="var vl = document.getElementById('am').value; var e=this;var s=document.getElementById('sbtn');setTimeout(function(){if(vl>=2000){e.disabled=true;s.disabled=true;}},0); return true;">

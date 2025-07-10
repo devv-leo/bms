@@ -298,7 +298,7 @@ input[type="date"]:valid::before {
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                    <a href="transfer.php">Transection</a>
+                                    <a href="transfer.php">transaction</a>
                                 </li>
                                 <li>
                                     <a href="deposit.php">Deposit Balance</a>
@@ -317,7 +317,7 @@ input[type="date"]:valid::before {
                         <ul class="ml-menu">
                                 
                                 <li>
-                                    <a href="history.php?id=">Transection History</a>
+                                    <a href="history.php?id=">transaction History</a>
                                 </li>
                                 <li>
                                     <a href="check_balance.php">Check Current Balance</a>

@@ -19,7 +19,7 @@ if (isset($with1)) {
 }else{
     $with1="0.00NGN";
 }
-$sent = mysqli_fetch_array(mysqli_query($con,"SELECT SUM(amount) as total1 FROM account_history where account='$id' and type='Transection'"));
+$sent = mysqli_fetch_array(mysqli_query($con,"SELECT SUM(amount) as total1 FROM account_history where account='$id' and type='transaction'"));
 $sent1=$sent['total1'];
 if (isset($sent1)) {
     $sent1=$sent['total1'].".00NGN";
@@ -224,7 +224,7 @@ html {
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                    <a href="transfer.php">Transection</a>
+                                    <a href="transfer.php">transaction</a>
                                 </li>
                                 <li>
                                     <a href="deposit.php">Deposit Balance</a>
@@ -243,7 +243,7 @@ html {
                         <ul class="ml-menu">
                                 
                                 <li>
-                                    <a href="history.php?id=">Transection History</a>
+                                    <a href="history.php?id=">transaction History</a>
                                 </li>
                                 <li>
                                     <a href="check_balance.php">Check Current Balance</a>
@@ -399,7 +399,7 @@ html {
                                 <input type="text" class="form-control" value="<?php  echo $with1;?>" readonly>
                             </div>
                             <div class="col-lg-2">
-                                <p for="exampleInputPassword1" style="margin-bottom: 1px; margin-top: 8px;">Transection Balance</p>
+                                <p for="exampleInputPassword1" style="margin-bottom: 1px; margin-top: 8px;">transaction Balance</p>
                                 <input type="text" class="form-control" value="<?php  echo $sent1;?>" readonly>
                             </div>
                             <div class="col-lg-2">
