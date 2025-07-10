@@ -424,7 +424,7 @@ html {
     <div class="footer-basic" id="bot">
         <footer>
             <center><h4 style="margin-top: -15px;">Contact Us</h4></center>
-            <div class="social"><a href="https://www.instagram.com/amirghafoor786/"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-skype"></i></a><a href="https://twitter.com/"><i class="icon ion-social-twitter"></i></a><a href="https://web.facebook.com/"><i class="icon ion-social-facebook"></i></a></div>
+            <div class="social"><a href="https://www.instagram.com/"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-skype"></i></a><a href="https://twitter.com/"><i class="icon ion-social-twitter"></i></a><a href="https://web.facebook.com/"><i class="icon ion-social-facebook"></i></a></div>
           <hr style="height:1px;border-width:0; margin-top: -10px; color:gray;background-color:gray">
             <ul class="list-inline">
                 <li class="list-inline-item"><a href="dashboard.php">Home</a></li>

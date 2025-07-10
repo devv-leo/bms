@@ -279,7 +279,7 @@ error_log("Debug: Starting HTML");
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                    <a href="employee/transfer.php">transaction</a>
+                                    <a href="employee/transfer.php">Transaction</a>
                                 </li>
                                 <li>
                                     <a href="employee/deposit.php">Deposit Balance</a>
@@ -298,7 +298,7 @@ error_log("Debug: Starting HTML");
                         <ul class="ml-menu">
                                 
                                 <li>
-                                    <a href="employee/history.php?id=">transaction History</a>
+                                    <a href="employee/history.php?id=">Transaction History</a>
                                 </li>
                                 <li>
                                     <a href="employee/check_balance.php">Check Current Balance</a>
@@ -779,7 +779,7 @@ error_log("Debug: Starting HTML");
             <div class="footer-basic" id="bot">
                 <footer>
                     <center><h4 style="margin-top: -15px;">Contact Us</h4></center>
-                    <div class="social"><a href="https://www.instagram.com/amirghafoor786/"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-skype"></i></a><a href="https://twitter.com/"><i class="icon ion-social-twitter"></i></a><a href="https://web.facebook.com/"><i class="icon ion-social-facebook"></i></a></div>
+                    <div class="social"><a href="https://www.instagram.com/"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-skype"></i></a><a href="https://twitter.com/"><i class="icon ion-social-twitter"></i></a><a href="https://web.facebook.com/"><i class="icon ion-social-facebook"></i></a></div>
                     <hr style="height:1px;border-width:0; margin-top: -10px; color:gray;background-color:gray">
                     <ul class="list-inline">
                         <li class="list-inline-item"><a href="dashboard.php">Home</a></li>
