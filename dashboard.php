@@ -417,7 +417,7 @@ error_log("Debug: Starting HTML");
                         </a>
                         </div>
                         <div class="content" id="bnk">
-                            <div class="text">transaction MONEY</div>
+                            <div class="text">TRANSACTION MONEY</div>
                             <div ><h4 style="margin-top: 5px; font-size: 20px;"><?php echo rup_format("SELECT SUM(amount) as total FROM account_history where type='transaction'") ?></h4></div>
                         </div>
                     </div>
@@ -561,7 +561,7 @@ error_log("Debug: Starting HTML");
                         </a>
                         </div>
                         <div class="content" id="bnk">
-                            <div class="text">transaction MONEY</div>
+                            <div class="text">TRANSACTION MONEY</div>
                             <div ><h4 style="margin-top: 5px; font-size: 20px;"><?php echo rup_format("SELECT SUM(amount) as total FROM account_history where type='transaction'") ?></h4></div>
                         </div>
                     </div>
