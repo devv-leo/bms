@@ -23,59 +23,144 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <link rel="stylesheet" href="../plugins/node-waves/waves.css">
     <link rel="stylesheet" href="../plugins/animate-css/animate.css">
     <style type="text/css">
+        .chat-container {
+            max-width: 500px;
+            margin: 40px auto 0 auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            height: 500px;
+        }
+        .chat-header {
+            padding: 16px;
+            background: #F44336;
+            color: #fff;
+            border-radius: 10px 10px 0 0;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .chat-messages {
+            flex: 1;
+            padding: 16px;
+            overflow-y: auto;
+            background: #f4f7fa;
+            display: flex;
+            flex-direction: column;
+        }
+        .chat-message {
+            margin-bottom: 16px;
+            display: flex;
+            flex-direction: column;
+        }
+        .chat-message.user {
+            align-items: flex-end;
+        }
+        .chat-message.bot {
+            align-items: flex-start;
+        }
+        .chat-bubble {
+            max-width: 75%;
+            padding: 10px 16px;
+            border-radius: 18px;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 4px;
+        }
+        .chat-message.user .chat-bubble {
+            background: brown;
+            color: #fff;
+            border-bottom-right-radius: 4px;
+        }
+        .chat-message.bot .chat-bubble {
+            background: #e0e0e0;
+            color: #222;
+            border-bottom-left-radius: 4px;
+        }
+        .chat-input-area {
+            display: flex;
+            padding: 12px;
+            border-top: 1px solid #eee;
+            background: #fafbfc;
+            border-radius: 0 0 10px 10px;
+        }
+        .chat-input {
+            flex: 1;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-size: 16px;
+            outline: none;
+        }
+        .chat-send-btn {
+            background: #F44336;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 24px;
+            margin-left: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .chat-send-btn:hover {
+            background: brown;
+        }
         .footer-basic {
-  padding:40px 0;
-  background-color:brown;
-  color:white;
-}
-.footer-basic ul {
-  padding:0;
-  list-style:none;
-  text-align:center;
-  font-size:18px;
-  line-height:1.6;
-  margin-bottom:0;
-}
-.footer-basic li {
-  padding:0 10px;
-}
-.footer-basic ul a {
-  color:inherit;
-  text-decoration:none;
-  opacity:0.8;
-}
-.footer-basic ul a:hover {
-  opacity:1;
-}
-.footer-basic .social {
-  text-align:center;
-  padding-bottom:25px;
-}
-.footer-basic .social > a {
-  font-size:24px;
-  width:40px;
-  height:40px;
-  line-height:40px;
-  display:inline-block;
-  text-align:center;
-  border-radius:50%;
-  border:1px solid #ccc;
-  margin:0 8px;
-  color:inherit;
-  opacity:0.75;
-}
-.footer-basic .social > a:hover {
-  opacity:0.9;
-}
-.footer-basic .copyright {
-  text-align:center;
-  font-size:16px;
-  color:#aaa;
-  margin-bottom:-25px;
-}
-html {
-  scroll-behavior: smooth;
-}
+            padding:40px 0;
+            background-color:brown;
+            color:white;
+        }
+        .footer-basic ul {
+            padding:0;
+            list-style:none;
+            text-align:center;
+            font-size:18px;
+            line-height:1.6;
+            margin-bottom:0;
+        }
+        .footer-basic li {
+            padding:0 10px;
+        }
+        .footer-basic ul a {
+            color:inherit;
+            text-decoration:none;
+            opacity:0.8;
+        }
+        .footer-basic ul a:hover {
+            opacity:1;
+        }
+        .footer-basic .social {
+            text-align:center;
+            padding-bottom:25px;
+        }
+        .footer-basic .social > a {
+            font-size:24px;
+            width:40px;
+            height:40px;
+            line-height:40px;
+            display:inline-block;
+            text-align:center;
+            border-radius:50%;
+            border:1px solid #ccc;
+            margin:0 8px;
+            color:inherit;
+            opacity:0.75;
+        }
+        .footer-basic .social > a:hover {
+            opacity:0.9;
+        }
+        .footer-basic .copyright {
+            text-align:center;
+            font-size:16px;
+            color:#aaa;
+            margin-bottom:-25px;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body class="theme-red">
@@ -240,11 +325,13 @@ html {
 </section>
 <section class="content" id="top">
     <div class="container-fluid">
-        <div class="block-header">
-            <h2>AI Assistant</h2>
-        </div>
-        <div class="card-panel">
-            <p>Currently in production. Future updates will provide interactive AI-powered banking assistance here.</p>
+        <div class="chat-container">
+            <div class="chat-header">AI Assistant</div>
+            <div class="chat-messages" id="chatMessages"></div>
+            <form class="chat-input-area" id="chatForm" autocomplete="off" onsubmit="return false;">
+                <input type="text" class="chat-input" id="chatInput" placeholder="Type your message..." autocomplete="off" />
+                <button type="submit" class="chat-send-btn">Send</button>
+            </form>
         </div>
     </div>
     <br>
@@ -266,5 +353,31 @@ html {
         </div>
     </div>
 </section>
+<script>
+    const chatForm = document.getElementById('chatForm');
+    const chatInput = document.getElementById('chatInput');
+    const chatMessages = document.getElementById('chatMessages');
+
+    function appendMessage(sender, text) {
+        const msgDiv = document.createElement('div');
+        msgDiv.className = 'chat-message ' + sender;
+        const bubble = document.createElement('div');
+        bubble.className = 'chat-bubble';
+        bubble.textContent = text;
+        msgDiv.appendChild(bubble);
+        chatMessages.appendChild(msgDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    chatForm.addEventListener('submit', function() {
+        const userMsg = chatInput.value.trim();
+        if (userMsg === '') return;
+        appendMessage('user', userMsg);
+        chatInput.value = '';
+        setTimeout(function() {
+            appendMessage('bot', 'Currently in development. I will  be able to handle your requests soon.');
+        }, 500);
+    });
+</script>
 </body>
 </html> 
