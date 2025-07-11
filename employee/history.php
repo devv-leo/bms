@@ -267,6 +267,12 @@ input[type="date"]:valid::before {
                             <span>Bank Balance</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="ai_assistant.php">
+                            <i class="material-icons">smart_toy</i>
+                            <span>AI Assistant</span>
+                        </a>
+                    </li>
                    <li>
                         <a href="user_profile.php">
                             <i class="material-icons">person</i>

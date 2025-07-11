@@ -171,7 +171,7 @@ error_log("Debug: Starting HTML");
         <div class="container-fluid">
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
-                <a href="javascript:void(0);" class="bars"></a>
+                <a href="javasript:void(0);" class="bars"></a>
                 <a class="navbar-brand" href="dashboard.php" style="font-size: 18px;">SKY BANK LIMITED</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -584,7 +584,7 @@ error_log("Debug: Starting HTML");
                 <div class="card">
                   <div class="card-body">
                     <div class="header">
-                            <h2>EMPLOYEES INFO BOARD</h2>                        
+                            <h2>EMPLOYEES</h2>                        
                         </div>
                         <div  class="table-responsive"style="overflow:auto; max-height: 475px;">
                     <table class="table table-striped" id="myTable">
@@ -649,7 +649,7 @@ error_log("Debug: Starting HTML");
                 <div class="card">
                   <div class="card-body">
                     <div class="header">
-                            <h2>ACCOUNTS INFO BOARD</h2>                        
+                            <h2>CUSTOMERS ACCOUNTS</h2>                        
                         </div>
                         <div  class="table-responsive"style="overflow:auto; max-height: 475px;">
                     <table class="table table-striped" id="myTable">
@@ -705,14 +705,14 @@ error_log("Debug: Starting HTML");
                 <div class="card">
                   <div class="card-body">
                     <div class="header">
-                            <h2>ACCOUNTS HISTORY INFO BOARD</h2>                        
+                            <h2>ACCOUNTS HISTORY</h2>                        
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
                                     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                         <i class="material-icons">more_vert</i>
                                     </a>
                                     <ul class="dropdown-menu pull-right">
-                                        <li><a href="employee/history_details.php?ty=transaction">transaction history</a></li>
+                                        <li><a href="employee/history_details.php?ty=transaction">Transaction history</a></li>
                                         <li><a href="employee/history_details.php?ty=Recieved">Recieved history</a></li>
                                         <li><a href="employee/history_details.php?ty=Withdraw">Withdrawal history</a></li>
                                         <li><a href="employee/history_details.php?ty=Deposit">Deposit history</a></li>

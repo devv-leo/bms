@@ -15,7 +15,7 @@ function email_send($address,$header,$msg)
            $mail->Username = "lekan.code@gmail.com"; // receipient email address
            $mail->Password = "hwmtgjrljztzeclv"; //enter your email password
            $mail->AddAddress($address);
-           $mail->SetFrom("lekan.code@gmail.com", "Sky Bank Limited");
+           $mail->SetFrom("lekan.code@gmail.com", "SKY BANK Limited");
            $mail->Subject  = $header;
            $mail->Body     = $msg;
            if(!$mail->Send()) {
