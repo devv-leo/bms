@@ -7518,7 +7518,7 @@ fieldset[disabled] .form-control {
     position: relative;
     border-bottom: 1px solid #e9e9e9;
     background: url("../images/user-img-background.jpg") no-repeat no-repeat;
-    height: 135px; }
+    }
     .sidebar .user-info .image {
       margin-right: 12px;
       display: inline-block; }
@@ -7552,8 +7552,8 @@ fieldset[disabled] .form-control {
         color: #fff; }
       .sidebar .user-info .info-container .user-helper-dropdown {
         position: absolute;
-        right: -3px;
-        bottom: -12px;
+        right: -2px;
+        bottom: -2px;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         -ms-box-shadow: none;
