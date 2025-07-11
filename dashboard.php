@@ -785,7 +785,7 @@ error_log("Debug: Starting HTML");
                         <li class="list-inline-item"><a href="employee/about.php?type=Privacy">Privacy Notice</a></li>
                     </ul>
                     <hr style="height:1px;border-width:0; color:gray;background-color:gray">
-                    <p class="copyright" style="margin-top: 0px;">SKY BANK LIMITED PAKISTAN © DeepAI 2024</p>
+                    <p class="copyright" style="margin-top: 0px;">SKY BANK LIMITED © DeepAI 2024</p>
                 </footer>
             </div>
         </div>

@@ -601,7 +601,7 @@ html {
                 <li class="list-inline-item"><a href="about.php?type=Privacy">Privacy Notice</a></li>
             </ul>
             <hr style="height:1px;border-width:0; color:gray;background-color:gray">
-            <p class="copyright" style="margin-top: 0px;">SKY BANK LIMITED PAKISTAN © DeepAI 2021</p>
+            <p class="copyright" style="margin-top: 0px;">SKY BANK LIMITED © 2025</p>
         </footer>
     </div>
 </div>
