@@ -1,5 +1,5 @@
-# Bank Management System #
-This is a web-based Bank Management System developed using PHP, HTML, JavaScript, Bootstrap, and CSS. It includes features such as email notifications using PHP Mailer.
+# Banking Management System #
+This is a web-based Banking Management System developed using PHP, HTML, JavaScript, Bootstrap, and CSS. It includes features such as email notifications using PHP Mailer.
 
 ## 🔧 Requirements ##
 - XAMPP (or any local PHP server)
