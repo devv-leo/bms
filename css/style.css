@@ -7530,9 +7530,8 @@ fieldset[disabled] .form-control {
         vertical-align: bottom !important; }
     .sidebar .user-info .info-container {
       cursor: default;
-      display: block;
-      position: relative;
-      top: 25px; }
+      display: inline-block;
+      }
       .sidebar .user-info .info-container .name {
         white-space: nowrap;
         -ms-text-overflow: ellipsis;
